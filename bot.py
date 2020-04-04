@@ -33,7 +33,9 @@ else:
 def start_handler(update, context):
     # Creating a handler-function for /start command
     logger.info("User {} started bot".format(update.effective_user["id"]))
-    update.message.reply_text("Hello from Python!\nPress /random to get random number")
+    update.message.\
+        reply_text("Привет!\nЭто твой chat_id - {} \n"
+                   " Ниже будут оповещения, напши /help для более подробной информации").format(update.Message.Chat.ID)
 
 
 
