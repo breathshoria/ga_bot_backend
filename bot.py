@@ -37,6 +37,15 @@ def start_handler(update, context):
         reply_text("Привет!\nЭто твой chat_id - {} \n"
                    "Ниже будут оповещения, напши /help для более подробной информации".format(update.message.chat.id))
 
+def help_handler(update, context):
+    # Creating a handler-function for /start command
+    logger.info("User {} started helper".format(update.effective_user["id"]))
+    update.message.\
+        reply_text("Отправь chat_id в конфу, там всё сделаем. \n "
+                   "Оповещения будут приходить после настроек параметров"
+                   " GA (где раньше был e-mail)")
+
+
 
 
 if __name__ == '__main__':
@@ -44,4 +53,5 @@ if __name__ == '__main__':
     updater = Updater(TOKEN, use_context=True)
 
     updater.dispatcher.add_handler(CommandHandler("start", start_handler))
+    updater.dispatcher.add_handler(CommandHandler("help", help_handler))
     run(updater)
