@@ -35,7 +35,7 @@ def start_handler(update, context):
     logger.info("User {} started bot".format(update.effective_user["id"]))
     update.message.\
         reply_text("Привет!\nЭто твой chat_id - {} \n"
-                   " Ниже будут оповещения, напши /help для более подробной информации").format(update.Message.Chat.ID)
+                   "Ниже будут оповещения, напши /help для более подробной информации".format(update.Message.Chat.ID))
 
 
 
