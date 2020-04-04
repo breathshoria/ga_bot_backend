@@ -41,7 +41,7 @@ def help_handler(update, context):
     # Creating a handler-function for /start command
     logger.info("User {} started helper".format(update.effective_user["id"]))
     update.message.\
-        reply_text("Отправь chat_id в конфу, там всё сделаем. \n "
+        reply_text("Отправь chat_id в конфу, там всё сделаем.\n"
                    "Оповещения будут приходить после настроек параметров"
                    " GA (где раньше был e-mail)")
 
