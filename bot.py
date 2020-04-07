@@ -25,6 +25,7 @@ elif mode == "prod":
                               port=PORT,
                               url_path=TOKEN)
         updater.bot.set_webhook("https://{}.herokuapp.com/{}".format(HEROKU_APP_NAME, TOKEN))
+        updater.idle()
 else:
     logger.error("No MODE specified!")
     sys.exit(1)
